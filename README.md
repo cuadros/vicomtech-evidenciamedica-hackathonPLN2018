@@ -17,7 +17,7 @@ La tecnología de NLP, es tecnología própia de Vicomtech que se accede mediant
 
 Artículo donde explica su funcionamiento:
 
-+Biomedical term normalization of EHRs with UMLS, Naiara Perez, Montse Cuadros and German Rigau. To appear in LREC2018. 
++ Biomedical term normalization of EHRs with UMLS, Naiara Perez, Montse Cuadros and German Rigau. To appear in LREC2018. 
 
 
 
