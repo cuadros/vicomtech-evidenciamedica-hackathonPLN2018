@@ -5,7 +5,7 @@ Este repositorio contiene el código fuente desarrollado para el Segundo Hackath
 
 + Aitor García Pablos, Naiara Pérez y Montse Cuadros.
 
-##El protitpo 
+## El prototipo 
 
 El prototipo que se ha desarrollado quiere dar una aproximación a la problemática de la búsqueda de evidencia clínica en literatura científica. Para tal propósito se ha diseñado un demostrador que permite realizar búsquedas semánticas basadas en UMLS en un conjunto de documentos científicos del corpus SCIELO. Por un lado, el demostrador espera un texto de entrada que es analizado usando un pipeline completo de procesamiento del lenguaje natural (PLN) adaptado a la medicina y se obtienen los conceptos principales. Por otro lado, los documentos de la base de datos que se usan para consultar, han sido previamente analizados con la misma herramienta con el fin de obtener sus conceptos relacionados. Una vez el usuario introduce un texto, el buscador encuentra los documentos más relevantes, los muestra ordenados por similaridad y los puede filtrar usando los conceptos del texto de entrada. Finalmente, se ofrecen varias visualizaciones cruzadas para buscar relaciones relevantes entre conceptos, revistas, autores y fechas de publicación, entre otros.
 
