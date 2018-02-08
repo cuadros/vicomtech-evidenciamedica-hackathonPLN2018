@@ -26,8 +26,8 @@ https://demos-v2.vicomtech.org/umlsmapper
 
 ## Ejecución
 
-Para la ejecución del demostrador, hay que lanzar por un lado el contenido de la carpeta: scielo_data_management 
-y por otro lado, desplegar el frontend contenido en la carpeta: hackathon-nlp2018-ui
+Para la ejecución del demostrador, hay que lanzar por un lado el contenido de la carpeta: [scielo_data_management](https://github.com/cuadros/vicomtech-evidenciamedica-hackathonPLN2018/tree/master/scielo_data_management)
+y por otro lado, desplegar el frontend contenido en la carpeta: [hackathon-nlp2018-ui](https://github.com/cuadros/vicomtech-evidenciamedica-hackathonPLN2018/tree/master/hackathon-nlp2018-ui)
 
 # Información de contacto
 
