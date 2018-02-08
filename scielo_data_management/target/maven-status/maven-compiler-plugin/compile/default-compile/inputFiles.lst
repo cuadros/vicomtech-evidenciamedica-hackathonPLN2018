@@ -1,0 +1,14 @@
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/services/indexing/ScieloDatasetBatchProcessService.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/services/indexing/ScieloDocumentsIndexableMapGenerator.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/io/ScieloDocumentParser.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/controllers/IndexingController.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/ScieloDataManagementApplication.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/elasticsearch/ElasticSearchClientConnectionConfig.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/services/indexing/ScieloDocumentIndexer.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/controllers/SearchingController.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/controllers/MainCrontroller.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/services/indexing/ScieloContentIndexableMapCreator.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/model/TextSearchResponse.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/services/search/ScieloQueryBuilder.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/model/RetrievedScieloArticleInfo.java
+/nlp/soft/Hackathon2018/scielo_data_management/src/main/java/org/vicomtech/hackathon_nlp2018/scielo_data_management/model/ScieloDublinCoreDocument.java

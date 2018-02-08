@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.vicomtech.hackathon_nlp2018.scielo_data_management.io.ScieloDocumentParserTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec - in org.vicomtech.hackathon_nlp2018.scielo_data_management.io.ScieloDocumentParserTest

@@ -1,0 +1,198 @@
+
+<nav class="navbar navbar-default" style="height: 75px;margin-bottom: 5px">
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<a class="navbar-brand" href="http://www.vicomtech.org" target="_blank"> <img class="pull-left"
+				alt="Vicomtech" height="50" src="/assets/vicomtech_m.png" /> 
+			</a>
+			
+		</div><div class="col-md-9">
+		<h2>UMLS
+				concept based document search and browsing</h2>
+				</div>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<!-- <div class="row">
+		<div class="col-md-12">
+			<h3>UMLS concept based text search</h3>
+		</div>
+	</div> -->
+	<div class="row" style="margin-bottom: 15px">
+		<div class="col-md-12">
+			<h2 id="search-title" style="margin-top:10px">Search</h2>
+			<a class="label label-success" style="font-size: smaller;"
+				href="#visualize-title">Go to Visualize</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+
+			<div class="form-group">
+
+				<label for="searchText"> Enter text and click the Search
+					button: </label> <input class="form-control" #searchText
+					(keyup.enter)="this.executeSearch(this.searchText.value)"
+					id="searchText" placeholder="Type your search here..." type="text" />
+			</div>
+		</div>
+		<div class="col-md-4">
+
+			<button type="button"
+				(click)="this.executeSearch(this.searchText.value)"
+				class="btn btn-primary" style="margin-top: 25px">Search</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<strong>Detected UMLS concepts</strong>
+					</h3>
+				</div>
+				<div class="panel-body" style="min-height: 250px; max-height: 250px; overflow-y: auto; overflow-x: auto;">
+					<div *ngIf="this.detectedUMLCodesMetadata" class="list-group">
+						<div *ngFor="let umlsMetadata of this.detectedUMLCodesMetadata"
+							class="list-group-item" (click)="this.selectUMLSMetadata(umlsMetadata)" [class.blacklisted_umls_concept]="this.isBlackListed(umlsMetadata)" [class.active]="!this.isBlackListed(umlsMetadata) && this.selectedUMLSConceptMetadata === umlsMetadata">
+							<em *ngIf="umlsMetadata"> <span class="label label-info" [style.background-color]="this.retrieveColorForSemanticType(umlsMetadata.semanticTypes[0])">{{umlsMetadata.semanticTypes[0]}}</span>
+								<strong>{{umlsMetadata.preferredTerm | capitalize}}</strong></em>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div *ngIf="this.selectedUMLSConceptMetadata" class="panel panel-default">
+  <div class="panel-body" *ngIf="this.selectedUMLSConceptMetadata.definitions"><div class="label label-success">UMLS identifier: <strong style="font-size: 12px;">{{this.selectedUMLSConceptMetadata.CUI}}</strong></div><br>{{this.selectedUMLSConceptMetadata.definitions[0] | capitalize}}</div>
+  <div class="panel-body" *ngIf="!this.selectedUMLSConceptMetadata.definitions"><div class="label label-success">UMLS identifier: <strong style="font-size: 12px;">{{this.selectedUMLSConceptMetadata.CUI}}</strong></div><br><em>No definition is stored for this concept</em></div>
+</div>
+		</div>
+		<div class="col-md-8">
+			<div class="panel panel-info" style="min-height: 250px">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<strong>Articles related to your search</strong>
+					</h3>
+				</div>
+				<div *ngIf="textSearchResponse" class="panel-body"
+					style="min-height: 250px; max-height: 250px; overflow-y: auto; overflow-x: auto; white-space: nowrap;">
+
+					<div *ngFor="let article of textSearchResponse.results"
+						class="list-group-item" style="width: 110%">
+						<span class="label label-primary pull-left">{{article.position}}</span>
+						&nbsp;&nbsp; 
+						
+						<a target="_blank" href="http://scielo.isciii.es/scielo.php?script=sci_arttext&pid={{article.identifier.replace('oai:scielo:','')}}"><strong>{{article.titleES}}</strong> <small>({{article.authors}})</small>
+						<i>{{article.journal}}</i>
+						</a>
+					</div>
+
+				</div>
+				<div class="panel-footer">
+					<div class="badge badge-default pull-right">
+						Total hits: <em *ngIf="textSearchResponse">{{textSearchResponse.totalHits}}</em><em
+							*ngIf="!textSearchResponse">N/A</em>
+					</div>
+					<ul *ngIf="textSearchResponse" class="pagination">
+						<li><a (click)="this.servePage(0)" href="#">&lt;&lt;</a></li>
+						<li *ngFor="let pag of this.pageNumbers"><a
+							(click)="this.servePage(pag)" href="#">{{pag}}</a></li>
+						<li><a (click)="this.servePage(this.lastPage)" href="#">&gt;&gt;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-12">
+
+			<h2 id="visualize-title">Visualize</h2>
+			<a class="label label-success" style="font-size: smaller;"
+				href="#search-title">Go to Search</a>
+			<p>
+				<strong>Here you can find different visualizations to help
+					gaining insight about the content of the article corpus.</strong>
+			</p>
+			<p>
+				<!-- <a class="btn" href="#">View details »</a> -->
+			</p>
+		</div>
+	</div>
+	<!-- <div class="row">
+		<div class="col-md-4">
+			<img alt="Bootstrap Image Preview"
+				src="http://www.excel-easy.com/data-analysis/images/charts/line-chart.png" />
+		</div>
+		<div class="col-md-4">
+			<img alt="Bootstrap Image Preview"
+				src="http://www.excel-easy.com/data-analysis/images/charts/line-chart.png" />
+		</div>
+		<div class="col-md-4">
+			<img alt="Bootstrap Image Preview"
+				src="http://www.excel-easy.com/data-analysis/images/charts/line-chart.png" />
+		</div>
+		<iframe
+			src="http://deepnlp:5601/app/kibana#/visualize/create?embed=true&type=pie&indexPattern=0c706ad0-ff50-11e7-9ce2-d1d64e1f382c&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:subjects.keyword,order:desc,orderBy:'1',size:10),schema:segment,type:terms)),params:(addLegend:!t,addTooltip:!t,isDonut:!t,labels:(last_level:!t,show:!f,truncate:100,values:!t),legendPosition:right,type:pie),title:'New+Visualization',type:pie))"
+			height="600" width="1000"></iframe>
+
+		<iframe
+			src="http://deepnlp:5601/app/kibana#/visualize/edit/82011be0-ff65-11e7-9ce2-d1d64e1f382c?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(vis:(defaultColors:('0+-+5':'rgb(247,252,245)','10+-+15':'rgb(116,196,118)','15+-+20':'rgb(35,139,69)','5+-+10':'rgb(199,233,192)'))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:umls_concepts.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms),(enabled:!t,id:'3',params:(field:subjects.keyword,order:desc,orderBy:'1',size:5),schema:group,type:terms)),params:(addLegend:!t,addTooltip:!t,colorSchema:Greens,colorsNumber:4,colorsRange:!(),enableHover:!f,invertColors:!f,legendPosition:right,percentageMode:!f,setColorRange:!f,times:!(),type:heatmap,valueAxes:!((id:ValueAxis-1,labels:(color:%23555,rotate:0,show:!f),scale:(defaultYExtents:!f,type:linear),show:!f,type:value))),title:heatmap1,type:heatmap))"
+			height="600" width="1000"></iframe>
+	</div> -->
+
+	<div class="row">
+
+		<div class="col-md-4">
+			<button type="button" (click)="this.activeVis=1"
+				class="btn btn-primary" style="width: 100%">Chart
+				1</button>
+		</div>
+		<div class="col-md-4">
+			<button type="button" (click)="this.activeVis=2"
+				class="btn btn-primary" style="width: 100%">Chart
+				2</button>
+		</div>
+		<div class="col-md-4">
+			<button type="button" (click)="this.activeVis=3"
+				class="btn btn-primary" style="width: 100%">Chart
+				3</button>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<!-- <iframe *ngIf="this.activeVis==1" src="http://deepnlp:5601/goto/d4ee95e8f0162c932cc6346518a2e52e?embed=true" height="400" width="1800"></iframe> -->
+
+			<!-- <iframe *ngIf="this.activeVis==1"
+				src="http://deepnlp:5601/app/kibana#/visualize/edit/c7b7d270-01ed-11e8-9ce2-d1d64e1f382c?embed=true_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(vis:(defaultColors:('0+-+5':'rgb(247,251,255)','10+-+15':'rgb(107,174,214)','15+-+20':'rgb(33,113,181)','5+-+10':'rgb(198,219,239)'))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:'UMLS+codes',field:umls_concepts.keyword,order:desc,orderBy:'1',size:10),schema:segment,type:terms),(enabled:!t,id:'3',params:(customLabel:'Author+names',field:authors.keyword,order:desc,orderBy:'1',size:7),schema:group,type:terms)),params:(addLegend:!t,addTooltip:!t,colorSchema:Blues,colorsNumber:4,colorsRange:!(),enableHover:!f,invertColors:!f,legendPosition:right,percentageMode:!f,setColorRange:!f,times:!(),type:heatmap,valueAxes:!((id:ValueAxis-1,labels:(color:%23555,rotate:0,show:!f),scale:(defaultYExtents:!f,type:linear),show:!f,type:value))),title:heatmap2,type:heatmap))"
+				height="800" width="100%"></iframe>
+			<iframe *ngIf="this.activeVis==2"
+				src="http://deepnlp:5601/app/kibana#/visualize/edit/1984dc50-0127-11e8-9ce2-d1d64e1f382c?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:'umls_concepts:C0000726'),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:subjects.keyword,order:desc,orderBy:'1',size:10),schema:segment,type:terms),(enabled:!t,id:'4',params:(field:umls_concepts.keyword,order:desc,orderBy:'1',size:10),schema:segment,type:terms)),params:(addLegend:!t,addTooltip:!t,isDonut:!t,labels:(last_level:!t,show:!f,truncate:100,values:!t),legendPosition:right,type:pie),title:rosquilla,type:pie))"
+				height="800" width="100%"></iframe>
+			<iframe *ngIf="this.activeVis==3"
+				src="http://deepnlp:5601/app/kibana#/visualize/edit/90365390-0124-11e8-9ce2-d1d64e1f382c?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:subjects.keyword,order:desc,orderBy:'1',size:50),schema:segment,type:terms)),params:(maxFontSize:72,minFontSize:18,orientation:single,scale:linear),title:tag_cloud,type:tagcloud))"
+				height="800" width="100%"></iframe> -->
+
+<!--  -->
+<!-- <iframe *ngIf="this.activeVis==1" src="http://deepnlp:5601/app/kibana#/visualize/edit/2a18e5e0-06a7-11e8-9321-0703ccac9276?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(vis:(defaultColors:('0+-+8':'rgb(247,252,245)','15+-+23':'rgb(116,196,118)','23+-+30':'rgb(35,139,69)','8+-+15':'rgb(199,233,192)'))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:umls_concepts_names.keyword,order:desc,orderBy:'1',size:10),schema:segment,type:terms),(enabled:!t,id:'3',params:(field:subjects.keyword,order:desc,orderBy:'1',size:10),schema:group,type:terms)),params:(addLegend:!t,addTooltip:!t,colorSchema:Greens,colorsNumber:4,colorsRange:!(),enableHover:!f,invertColors:!f,legendPosition:right,percentageMode:!f,setColorRange:!f,times:!(),type:heatmap,valueAxes:!((id:ValueAxis-1,labels:(color:%23555,rotate:0,show:!f),scale:(defaultYExtents:!f,type:linear),show:!f,type:value))),title:heatmap_scielo6,type:heatmap))" height="600" width="100%"></iframe>
+ --><!-- <iframe *ngIf="this.activeVis==2" src="http://deepnlp:5601/app/kibana#/visualize/edit/cb0026d0-06a7-11e8-9321-0703ccac9276?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:'umls_concepts_names:medicamento'),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:umls_concepts_names.keyword,order:desc,orderBy:'1',size:10),schema:segment,type:terms),(enabled:!t,id:'3',params:(field:subjects.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),params:(addLegend:!t,addTooltip:!t,isDonut:!t,labels:(last_level:!t,show:!f,truncate:100,values:!t),legendPosition:right,type:pie),title:rosquilla_scielo6,type:pie))" height="600" width="100%"></iframe>
+ -->
+ 
+ <iframe *ngIf="this.activeVis==1" [src]="sanitizer.bypassSecurityTrustResourceUrl(this.datehistogramSrc)" height="600" width="100%"></iframe>
+ 
+ <iframe *ngIf="this.activeVis==2" [src]="sanitizer.bypassSecurityTrustResourceUrl(this.piechartSrc)" height="600" width="100%"></iframe>
+ 
+  <iframe *ngIf="this.activeVis==3"
+				[src]="sanitizer.bypassSecurityTrustResourceUrl(this.tagcloudSrc)" height="800" width="100%"></iframe>
+ 
+<!--  <iframe *ngIf="this.activeVis==3"
+				src="http://deepnlp:5601/app/kibana#/visualize/edit/90365390-0124-11e8-9ce2-d1d64e1f382c?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:subjects.keyword,order:desc,orderBy:'1',size:50),schema:segment,type:terms)),params:(maxFontSize:72,minFontSize:18,orientation:single,scale:linear),title:tag_cloud,type:tagcloud))"
+				height="800" width="100%"></iframe> -->
+				
+		</div>
+	</div>
+</div>
+

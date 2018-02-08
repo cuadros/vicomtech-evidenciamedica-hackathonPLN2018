@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scielo-document>
+<record>
+<header>
+<identifier>oai:scielo:S2340-98942015000400006</identifier>
+<datestamp>2015-12-14</datestamp>
+<setSpec>2340-9894</setSpec>
+</header>
+<metadata>
+<oai-dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai-dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+<dc:creator><![CDATA[Díaz Platas,Lucía]]></dc:creator>
+<dc:creator><![CDATA[Prado Wohlwend,Stefan]]></dc:creator>
+<dc:creator><![CDATA[Romero Otero,Mónica]]></dc:creator>
+<dc:creator><![CDATA[Iniesta Medel,Alba]]></dc:creator>
+<dc:creator><![CDATA[Ramudo Cela,Luis]]></dc:creator>
+<dc:subject><![CDATA[Ioflupano]]></dc:subject>
+<dc:subject><![CDATA[Ioduro123]]></dc:subject>
+<dc:subject><![CDATA[Radiocromatografía]]></dc:subject>
+<dc:subject><![CDATA[Radioquímica]]></dc:subject>
+<dc:subject><![CDATA[Captación tiroidea]]></dc:subject>
+<dc:subject><![CDATA[Cromatografía en capa fina]]></dc:subject>
+<dc:publisher><![CDATA[Universidad de Granada]]></dc:publisher>
+<dc:source><![CDATA[Ars Pharmaceutica (Internet)  v.56 n.4 2015]]></dc:source>
+<dc:date>2015-12-01</dc:date>
+<dc:type>journal article</dc:type>
+<dc:format>text/html</dc:format>
+<dc:identifier>http://scielo.isciii.es/scielo.php?script=sci_arttext&amp;pid=S2340-98942015000400006</dc:identifier>
+<dc:language>es</dc:language>
+<dc:title xml:lang="es"><![CDATA[Relación entre la pureza radioquímica del 123i-ioflupano y la captación extracraneal (tiroidea y parotídea)]]></dc:title>
+<dc:title xml:lang="en"><![CDATA[Relationship between radiochemical purity of 123i-ioflupane and extracranial image captation (parotid and thyroid)]]></dc:title>
+<dc:description xml:lang="es"><![CDATA[Objetivo: Estudiar el efecto de la pureza radioquímica (PR) del 123I-Ioflupano, utilizado para realizar SPECT cerebral de transportadores de dopamina, sobre las imágenes obtenidas y evaluar la posible influencia de la extravasación durante su administración y del grado de afectación del paciente por el síndrome parkinsoniano sobre los resultados. Material y métodos: Se realizó un estudio prospectivo en 39 pacientes. La PR del 123I-Ioflupano se determinó mediante cromatografía en capa fina. Se delimitaron las regiones de interés (ROI) en zona aproximada de cerebro, parótidas y región cervical, obteniéndose la media de cuentas en cada región y las ratios de actividad tiroides/cerebro (RTC) y parótidas/cerebro (RPC). Se propuso un modelo de regresión lineal múltiple con predictores cuantitativos y categóricos. Resultados: El modelo mostró correlación entre la PR y la RTC modificada por la presencia de extravasación, fue estadísticamente significativo (p<0,001) y predijo el 42,31% de la variabilidad de la RTC. La correlación entre PR y RPC no se modificó por ninguna de las variables propuestas. El modelo fue estadísticamente significativo (p<0,0176) y predijo el 12,3% de la variabilidad del RPC. Conclusiones: La capacidad predictiva del modelo para explicar la variabilidad de la RTC es aceptable y explica la repercusión negativa de la extravasación. Sin embargo, la capacidad para explicar la variabilidad de la RPC es baja y debe ser atribuida a variables no estudiadas. Una PR baja y la extravasación durante la administración del radiofármaco se traduce en mayor actividad extracraneal e implica peor calidad de imagen y mayor irradiación tiroidea.]]></dc:description>
+<dc:description xml:lang="en"><![CDATA[Aim: The aim of this study is to see the effect of radiochemical purity (PR) of 123I- Ioflupane used for cerebral dopamine transporter SPECT (Single Photon Emission Computed Tomography) on the images and evaluate the possible influence of extravasation during the administration in patient with Parkinson syndrome. Material and methods: A Prospective study was performed in 39 patients. The PR of 123I-Ioflupane was determined by radiochromatography. The regions of interest (ROI) were defined in general area of the brain, parotid and cervical region, obtaining the average counts in each region and activity ratios thyroid / brain (RTC) and parotid / brain (RPC). It was proposed a model of multiple linear regression with quantitative and categorical predictors Results: The model showed that correlation between the PR and the RTC was modified by the presence of extravasation, it was statistically significant (p < 0.001) and predicted the 42.31 % of the variability of the RTC. The correlation between PR and PRC was not modified by any of the variables proposed. The model was statistically significant (p < 0.0176) and 12.3% predicted variability RPC. Conclusions: The predictive variability of the model of RTC is acceptable and explains the negative impact of extravasation. However, the ability to explain the variability of the PRC is low and should not be attributed to variables studied. A low PR and extravasation during the administration of the radiopharmaceutical involves worse quality of image and increased thyroid irradiation.]]></dc:description>
+<dc:rights>https://creativecommons.org/licenses/by-nc-nd/2.0/</dc:rights>
+</oai-dc:dc>
+</metadata>
+</record>
+</scielo-document>
