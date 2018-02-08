@@ -1,7 +1,7 @@
 # Prototipo Vicomtech
 
 
-Este repositorio contiene el código fuente desarrollado para el Segundo Hackathon de PLN <http://www.primerhackathonpln.es/> del Plan de Impulso de las Tecnologías del Lenguaje. El contenido fue desarrollado por el equipo de Vicomtech <http://www.vicomtech.org> compuesto por:
+Este repositorio contiene el código fuente desarrollado para el [Segundo Hackathon de PLN](http://www.primerhackathonpln.es/) del Plan de Impulso de las Tecnologías del Lenguaje. El contenido fue desarrollado por el equipo de [Vicomtech](http://www.vicomtech.org) compuesto por:
 
 + Aitor García Pablos, Naiara Pérez y Montse Cuadros.
 
@@ -26,8 +26,11 @@ https://demos-v2.vicomtech.org/umlsmapper
 
 ## Ejecución
 
-Para la ejecución del demostrador, hay que lanzar por un lado el contenido de la carpeta: [scielo_data_management](https://github.com/cuadros/vicomtech-evidenciamedica-hackathonPLN2018/tree/master/scielo_data_management)
-y por otro lado, desplegar el frontend contenido en la carpeta: [hackathon-nlp2018-ui](https://github.com/cuadros/vicomtech-evidenciamedica-hackathonPLN2018/tree/master/hackathon-nlp2018-ui)
+Para la ejecución del demostrador: 
+
++ lanzar por un lado el contenido de la carpeta [scielo_data_management](https://github.com/cuadros/vicomtech-evidenciamedica-hackathonPLN2018/tree/master/scielo_data_management)
+
++ desplegar el frontend contenido en la carpeta [hackathon-nlp2018-ui](https://github.com/cuadros/vicomtech-evidenciamedica-hackathonPLN2018/tree/master/hackathon-nlp2018-ui)
 
 # Información de contacto
 
