@@ -20,16 +20,14 @@ La tecnología de NLP, es tecnología própia de Vicomtech que se accede mediant
 https://demos-v2.vicomtech.org/umlsmapper
 
 
-## Dependencias NLP
-
-
-
 ## Dependencias software
 
-+ java8, maven3, angular3, elasticsearch, kibana
++ java8, maven3, angular5.25, elasticsearch, kibana, Spring Boot
 
 ## Ejecución
 
+Para la ejecución del demostrador, hay que lanzar por un lado el contenido de la carpeta: scielo_data_management 
+y por otro lado, desplegar el frontend contenido en la carpeta: hackathon-nlp2018-ui
 
 # Información de contacto
 
