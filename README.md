@@ -17,8 +17,7 @@ La tecnología de NLP, es tecnología própia de Vicomtech que se accede mediant
 
 ### Demostrador herramienta NLP
 
-https://demos-v2.vicomtech.org/umlsmapper
-
+http://demos-v2.vicomtech.org/umlsmapper/
 
 ## Dependencias software
 
