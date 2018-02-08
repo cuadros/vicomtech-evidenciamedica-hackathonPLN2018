@@ -1,7 +1,7 @@
-# Prototipo Vicomtech
+# Búsqueda de evidencia clínica en literatura científica
 
 
-Este repositorio contiene el código fuente desarrollado para el [Segundo Hackathon de PLN](http://www.primerhackathonpln.es/) del Plan de Impulso de las Tecnologías del Lenguaje. El contenido fue desarrollado por el equipo de [Vicomtech](http://www.vicomtech.org) compuesto por:
+Este repositorio contiene el código fuente desarrollado relativo al prototipo desarrollado por [Vicomtech](http://www.vicomtech.org) para el [Segundo Hackathon de PLN](http://www.primerhackathonpln.es/) del Plan de Impulso de las Tecnologías del Lenguaje. El contenido fue desarrollado por el equipo de compuesto por:
 
 + Aitor García Pablos, Naiara Pérez y Montse Cuadros.
 
