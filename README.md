@@ -15,6 +15,12 @@ Las tecnologías usadas para el prototipo son una adaptación de herramientas de
 
 La tecnología de NLP, es tecnología própia de Vicomtech que se accede mediante una API. Además de poder acceder mediante un demostrador para ver el potencial solamente de la herramienta. 
 
+Artículo donde explica su funcionamiento:
+
++Biomedical term normalization of EHRs with UMLS, Naiara Perez, Montse Cuadros and German Rigau. To appear in LREC2018. 
+
+
+
 ### Demostrador herramienta NLP
 
 http://demos-v2.vicomtech.org/umlsmapper/
