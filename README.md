@@ -1,7 +1,7 @@
-# Prototipo Vicomtech-IK4
+# Prototipo Vicomtech
 
 
-Este repositorio contiene el código fuente desarrollado para el Segundo Hackathon de PLN <http://www.primerhackathonpln.es/> del Plan de Impulso de las Tecnologías del Lenguaje. El contenido fue desarrollado por el equipo de Vicomtech-IK4 <http://www.vicomtech.org> compuesto por:
+Este repositorio contiene el código fuente desarrollado para el Segundo Hackathon de PLN <http://www.primerhackathonpln.es/> del Plan de Impulso de las Tecnologías del Lenguaje. El contenido fue desarrollado por el equipo de Vicomtech <http://www.vicomtech.org> compuesto por:
 
 + Aitor García Pablos, Naiara Pérez y Montse Cuadros.
 
@@ -35,7 +35,7 @@ https://demos-v2.vicomtech.org/umlsmapper
 
 ````shell
 Aitor Garcia Pablos, Naiara Perez, Montse Cuadros
-Vicomtech-IK4
+Vicomtech
 20009 Donostia-San Sebastián
 {agarciap, nperez, mcuadros}@vicomtech.org
 ````
